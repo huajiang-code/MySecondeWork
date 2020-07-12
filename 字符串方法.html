@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<script>
+    //charAt()
+
+
+    // var str="abc";
+    // alert(str.charAt(1));
+
+
+    //indexOf()
+
+
+    // var str="abc";
+    // alert(str.indexOf("a"));
+
+
+    //lastIndexOf()
+
+
+    // var str="abca";
+    // alert(str.lastIndexOf("a"));
+
+
+    //replace()   替换
+
+
+    // var str="aabba";
+    // var str1=str.replace("a","c");
+    // alert(str1);
+
+
+    //slice()     截取
+
+
+    // var str="abc";
+    // var str1=str.slice(1,2);
+    // alert(str1);
+
+
+    //substring()    截取  和slice()的区别仅在负数
+
+
+    // var str="abcd";
+    // alert(str.slice(1,3));
+    // alert(str.slice(1));
+    // alert(str.substring(1,3));
+    // alert(str.substring(1));
+    // alert(str.slice(-2));
+    // alert(str.substring(-2));
+
+
+    //trim()      去除字符串前和后空格
+
+
+    // var str="  学习了js中  的trim方法  ";
+    // alert(str);
+    // alert(str.trim());
+
+
+    //toUpperCase()   将字符串转换为大写
+
+
+    // var str="abc";
+    // alert(str.toUpperCase());
+
+
+    //toLowerCase()   将字符串转换为小写
+
+
+    // var str="ABC";
+    // alert(str.toLowerCase());
+
+
+    //split()         将字符串用分隔符拆分，返回数组
+
+
+    // var str="get-element-by-id";
+    // var arr=str.split("-");
+    // alert(arr);
+
+
+    //练习部分
+    //封装一个函数，实现：首字母大写：最后得到：GetElementById
+    var str="get-element-by-id";
+    var str1="";
+    function fn(s){
+        var arr=s.split("-");   //arr是一个数组
+        for(var i=0;i<arr.length;i++){
+            str1+=arr[i][0].toUpperCase()+arr[i].substring(1);
+
+
+        }
+        return str1;
+    }
+    alert(fn(str));
+
+
+
+
+
+</script>
+</body>
+</html>

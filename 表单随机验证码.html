@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+
+<form action="">
+    用户名：<input type="text" id="userName">
+    <hr/>
+    秘码：<input type="password" id="userPwd">
+    <hr/>
+    验证码：<input type="text" id="yzm">
+    <span id="spans">123</span>
+    <hr/>
+    <input type="button" value="登录" id="btn">
+</form>
+
+<script>
+    var spans=document.getElementById("spans");
+    var btn=document.getElementById("btn");
+    var userName=document.getElementById("userName");
+    var userPwd=document.getElementById("userPwd");
+    var yzm=document.getElementById("yzm");
+    var suijinum=suijishengji();
+    spans.innerHTML=suijinum;
+    //1000-9999的四位数随机码
+    function suiji() {
+        var num=(Math.floor(Math.random()*100000)%10000);
+        if(num<1000)
+        {
+            num=(Math.floor(Math.random()*100000)%10000);
+        }
+        return num;
+    }
+    //生成任意区间内的随机数
+
+    function suijishengji(){
+        var suijistr="abcdefghigklmnopqrstuvwxyz0123456789ABCDEFGHIGKLMNOPQRSTUVWXYZ";
+        var strvalue="";
+        for(var i=0;i<4;i++)
+        {
+            //strvalue+=suijistr[Math.floor(Math.random()*1000)%suijistr.length];
+            //var str=renyi(0,suijistr.length-1);
+            strvalue+=suijistr[renyi(0,suijistr.length-1)];
+
+        }
+        return strvalue;
+    }
+
+
+
+    function renyi( min ,max) {
+        var str=Math.floor(Math.random()*(min-max-1)+max+1);
+        return str;
+    }
+
+    //验证码是1000到9999的随机数
+    //用户名和密码必须都是 admin
+    //验证码必须是生成的随机数
+    //
+
+    btn.addEventListener("click",anniu);
+    function anniu(){
+        if((userName.value=="admin")&&(userPwd.value=="admin")&&(yzm.value==suijinum))
+        {
+            location.href="http://www.baidu.com";
+            //location.replace("http://www.baidu.com");
+        }
+    }
+
+
+
+
+
+
+</script>
+</body>
+</html>

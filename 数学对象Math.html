@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<script>
+    var min=Math.min(43,23,54,5564,6,523,232);
+    document.write(min);
+    document.write("<br/>-------  -------<br/>");
+    var max=Math.max(43,23,54,5564,6,523,232);
+    document.write(max);
+    document.write("<br/>-------  -------<br/>");
+    var num=3.1415926;
+    document.write(Math.floor(num));   //舍掉小数，得到整数
+    document.write("<br/>-------  -------<br/>");
+    document.write(parseInt(num));   //舍掉小数，得到整数
+    document.write("<br/>-------ceil()-------<br/>");
+    var num1=3.1415936;
+    document.write(Math.ceil(num1));  //有小数点就进一，舍去小数，留下整数
+    document.write("<br/>-------abs()-------<br/>");
+    var num2=-5;
+    document.write(Math.abs(num2));  //取绝对值
+    document.write("<br/>-------sqrt()-------<br/>");
+    var num3=64;
+    document.write(Math.sqrt(num3));  //开平方
+    document.write("<br/>-------random()-------<br/>");
+    document.write(Math.random());
+    document.write("<br/>-------0-4之间的随机数-------<br/>");
+    document.write(Math.floor(Math.random()*10)%5);    //对5取余得到0-4，到5就整除成1了，余数为为0
+    document.write("<br/>-------round()-------<br/>");
+    var num4=3.5;
+    document.write(Math.round(num4));  //四舍五入
+
+</script>
+</body>
+</html>

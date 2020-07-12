@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body >
+<img src="images/tu2.jpg" alt="" id="imgs">
+<script>
+    var imgs=document.getElementById("imgs");
+
+    function suiji(min, max)
+    {
+
+            var str = Math.floor(Math.random() * (min - max-1) + max+1);
+            return str;
+    };
+      // document.write(suiji(100,102));
+    setInterval(function () {
+        imgs.setAttribute("style","width:"+suiji(100,400)+"px;position:absolute;left:"
+            +suiji(0,1300)+"px;top:"+suiji(0,650)+"px;");
+    },500);
+
+
+
+</script>
+</body>
+</html>

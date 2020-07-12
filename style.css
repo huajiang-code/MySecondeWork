@@ -1,0 +1,39 @@
+*{
+    margin:0;
+    padding:0px;
+}
+#div{
+    border:1px solid #ccc;
+    width:400px;
+    height:200px;
+    margin:50px auto;
+    overflow: hidden;
+    position: relative;
+
+}
+#div>ul>li>img{
+    width:400px;
+    height: 200px;
+}
+#div>ul{
+    list-style: none;
+}
+#div>span{
+    color:#fff;
+    background-color: #ccc;
+    position: absolute;
+    width:25px;
+    height:50px;
+    font-size: 30px;
+    line-height: 50px;
+    text-align: center;
+    opacity:0.5;
+    top:75px;
+
+}
+#div>span:first-child{
+
+}
+#div>span:last-child{
+    right:0;
+}

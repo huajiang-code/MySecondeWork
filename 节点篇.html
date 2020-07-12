@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<ul id="ul">
+    <li>1<a href="javasctipt:;">隐藏</a></li>
+    <li>2<a href="javasctipt:;">隐藏</a></li>
+    <li>3<a href="javasctipt:;">隐藏</a></li>
+    <li>4<a href="javasctipt:;">隐藏</a></li>
+    <li>5<a href="javasctipt:;">隐藏</a></li>
+    <li>6<a href="javasctipt:;">隐藏</a></li>
+</ul>
+<div style="width:20px;height:20px;margin:20px;" id="box"></div>
+<script>
+
+    var a=document.getElementsByTagName("a");
+    var ul=document.getElementById("ul");
+    alert(a[0].childNodes.length);
+    for(var i=0;i<a.length;i++)
+    {
+        a[i].onclick=function () {
+            this.parentNode.style.display="none";
+
+        }
+
+    }
+    var box=document.getElementById("box");
+    alert(box.getAttribute("style"));
+    box.setAttribute("style","width:40px;height:40px;margin:40px");
+    alert(box.getAttribute("style"));
+    box.removeAttribute("style");
+    alert(box.getAttribute("style"));
+
+
+
+</script>
+</body>
+</html>
